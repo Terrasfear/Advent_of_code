@@ -1,0 +1,19 @@
+file = open("input", 'r')
+lines = file.readlines()
+
+elves = list()
+elf = 0
+for line in lines:
+    if line == "\n":
+        elves.append(elf)
+        elf = 0
+    else:
+        elf = elf + int(line)
+
+elves.append(elf)
+elves.sort(reverse=True)
+
+print("Q1.1: elf with most calories has {} calories".format(elves[0]))
+
+print("Q1.2: the 3 elves with the most callories have {} calories combined".format(sum(elves[0:3])))
+

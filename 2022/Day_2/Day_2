@@ -1,0 +1,96 @@
+points = {
+    "X": 1,  # rock
+    "Y": 2,  # paper
+    "Z": 3  # scissors
+}
+
+
+def win_points(opponent: str, player: str):
+    if opponent == "A":
+        # rock
+        if player == "X":
+            # rock
+            return 3
+        elif player == "Y":
+            # paper
+            return 6
+        else:
+            # scissors
+            return 0
+    elif opponent == "B":
+        # paper
+        if player == "X":
+            # rock
+            return 0
+        elif player == "Y":
+            # paper
+            return 3
+        else:
+            # scissors
+            return 6
+    elif opponent == "C":
+        # scissors
+        if player == "X":
+            # rock
+            return 6
+        elif player == "Y":
+            # paper
+            return 0
+        else:
+            # scissors
+            return 3
+
+def player_shape(opponent: str, goal: str) -> str:
+    if opponent == "A":
+        # rock
+        if player == "X":
+            # lose
+            return "Z"
+        elif player == "Y":
+            # draw
+            return "X"
+        else:
+            # win
+            return "Y"
+    elif opponent == "B":
+        # paper
+        if player == "X":
+            # lose
+            return "X"
+        elif player == "Y":
+            # draw
+            return "Y"
+        else:
+            # win
+            return "Z"
+    elif opponent == "C":
+        # scissors
+        if player == "X":
+            # lose
+            return "Y"
+        elif player == "Y":
+            # draw
+            return "Z"
+        else:
+            # win
+            return "X"
+
+
+plan = open("input", "r")
+lines = plan.readlines()
+
+total_score_og = 0
+total_score_nw = 0
+for line in lines:
+    opponent = line[0]
+    player = line[2]
+
+    total_score_og = total_score_og + points[player] + win_points(opponent=opponent, player=player)
+
+    plan = line[2]
+    player = player_shape(opponent=opponent, goal=plan)
+    total_score_nw = total_score_nw + points[player] + win_points(opponent=opponent, player=player)
+
+print("Q2.1: total score: {}".format(total_score_og))
+print("Q2.2: total score: {}".format(total_score_nw))
+
