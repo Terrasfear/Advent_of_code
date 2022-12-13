@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ac3a6a7-7e68-4d3f-bde3-79f51ce47af6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day_12/Day_12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day_12/Input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day_12/Input_test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +38,7 @@
       <recent name="C:\Users\caspe\Documents\PyCharm\Advent_of_code\2022\Day_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Day_12">
+  <component name="RunManager" selected="Python.Day_13">
     <configuration name="Day_10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2022" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,19 +102,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Day_9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="2022" />
+    <configuration name="Day_13" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Advent_of_code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day_9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day_13" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day_9/Day_9.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day_13/Day_13.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Day_12" />
+        <item itemvalue="Python.Day_13" />
         <item itemvalue="Python.Folder_setting" />
+        <item itemvalue="Python.Day_12" />
         <item itemvalue="Python.Day_11" />
         <item itemvalue="Python.Day_10" />
-        <item itemvalue="Python.Day_9" />
       </list>
     </recent_temporary>
   </component>
@@ -207,38 +203,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670958101492" />
-    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1670967394043">
+    <state width="1899" height="388" key="GridCell.Tab.0.bottom" timestamp="1670974323719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967394043" />
-    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1670967394043">
+    <state width="1899" height="388" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670974323719" />
+    <state width="1899" height="388" key="GridCell.Tab.0.center" timestamp="1670974323719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967394043" />
-    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1670967394043">
+    <state width="1899" height="388" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670974323719" />
+    <state width="1899" height="388" key="GridCell.Tab.0.left" timestamp="1670974323719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967394043" />
-    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1670967394043">
+    <state width="1899" height="388" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670974323719" />
+    <state width="1899" height="388" key="GridCell.Tab.0.right" timestamp="1670974323719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967394043" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1670967392353">
+    <state width="1899" height="388" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670974323719" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1670973599525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967392353" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1670967392353">
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670973599525" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1670973599524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967392353" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1670967392353">
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670973599524" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1670973599524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967392353" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1670967392353">
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670973599524" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1670973599524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670967392353" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1670973599524" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1670957861028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -254,13 +250,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Day_12/Day_12.py</url>
-          <line>112</line>
+          <line>113</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Day_12/Day_12.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/Day_13/Day_13.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
