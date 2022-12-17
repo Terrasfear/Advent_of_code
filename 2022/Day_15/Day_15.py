@@ -5,17 +5,23 @@ import numpy as np
 file = open("Input", 'r')
 lines = file.readlines()
 
-# class Sensor:
-#
-#     def __init__(self, sx, sy, bx, by):
-#         self.Sensor_location = tuple([sx, sy])
-#         self.Beacon_location = tuple([bx, by])
-#         self.distance = abs(sx - bx) + abs(sy - by)
-#
-#     def is_within_range(self, locx, locy):
-#         return self.distance <= abs(self.Sensor_location[0] - locx) + abs(self.Sensor_location[1] - locy)
 
-sensors = np.zeros((len(lines), 5))
+def gen_test_points(sx, sy, radius: int):
+    diamond = []
+    for l in range(radius+1):
+        diamond.append(tuple([sx              + l,   # line 1
+                              sy + (radius+1) - l]))
+        diamond.append(tuple([sx + (radius+1) - l,   # line 2
+                              sy              - l]))
+        diamond.append(tuple([sx              - l,   # line 3
+                              sy - (radius+1) + l]))
+        diamond.append(tuple([sx - (radius+1) + l,   # line 4
+                              sy              + l]))
+
+    return np.array(diamond, dtype=np.int64)
+
+
+sensors = np.zeros((len(lines), 5),dtype=np.int64)
 
 for i, line in enumerate(lines):
     parse = re.search('Sensor at x=(-?\d+), y=(-?\d+): closest beacon is at x=(-?\d+), y=(-?\d+)', line)
@@ -30,33 +36,37 @@ xlim = tuple([int(np.append(sensors[:, 0] - sensors[:,4], sensors[:, 2]).min()),
 ylim = tuple([int(np.append(sensors[:, 1] - sensors[:,4], sensors[:, 3]).min()),
               int(np.append(sensors[:, 1] + sensors[:,4], sensors[:, 3]).max())])
 
-coverage_counter = 0
-test_y = 2000000
+# coverage_counter = 0
+# test_y = 2000000
+#
+# test_y_sensors = sensors[~(abs(sensors[:,1] - test_y) > sensors[:,4])]
 
-test_y_sensors = sensors[~(abs(sensors[:,1] - test_y) > sensors[:,4])]
+# for test_x in range(xlim[0], xlim[1] + 1):
+#     test_x_sensors = test_y_sensors[~(abs(test_y_sensors[:, 0] - test_x) > test_y_sensors[:, 4])]
+#
+#     if (abs(sensors[:, 0] - test_x) + abs(sensors[:, 1] - test_y) <= sensors[:, 4]).any():  # location within range
+#         if not np.logical_and(sensors[:, 2] == test_x, sensors[:, 3] == test_y).any():      # ... but not a beacon
+#             coverage_counter += 1
+#     pass
+#
+# print(f"{coverage_counter=}")
 
-for test_x in range(xlim[0], xlim[1] + 1):
-    test_x_sensors = test_y_sensors[~(abs(test_y_sensors[:, 0] - test_x) > test_y_sensors[:, 4])]
-
-    if (abs(sensors[:, 0] - test_x) + abs(sensors[:, 1] - test_y) <= sensors[:, 4]).any():  # location within range
-        if not np.logical_and(sensors[:, 2] == test_x, sensors[:, 3] == test_y).any():      # ... but not a beacon
-            coverage_counter += 1
-    pass
-
-print(f"{coverage_counter=}")
-
-test_area = 20
+test_area = 4000000
 found = False
-for test_y in range(test_area+1):
-    test_y_sensors = sensors[~(abs(sensors[:, 1] - test_y) > sensors[:, 4])]
-    for test_x in range(test_area+1):
-        test_x_sensors = test_y_sensors[~(abs(test_y_sensors[:, 0] - test_x) > test_y_sensors[:, 4])]
-        if not (abs(sensors[:, 0] - test_x) + abs(sensors[:, 1] - test_y) <= sensors[:, 4]).any():  # not within any range
+
+# test diamond per sensor
+for sensor in sensors:
+    print(sensor)
+    test_points = gen_test_points(sensor[0], sensor[1], sensor[4])
+    test_points = test_points[(0 <= test_points[:,0]) & (test_points[:,0] <= test_area) & (0 <= test_points[:,1]) & (test_points[:,1] <= test_area)] # Remove out of bounds
+    pass
+    for test_point in test_points:
+        if not (abs(sensors[:, 0] - test_point[0]) + abs(sensors[:, 1] - test_point[1]) <= sensors[:, 4]).any(): # not within any range:
             found = True
             break
     if found:
         break
 
-print(f"location: ({test_x},{test_y})\nTuning frequency: {test_x*4000000+test_y}")
+print(f"location: ({test_point[0]},{test_point[1]})\nTuning frequency: {test_point[0]*4000000+test_point[1]}")
 
 
