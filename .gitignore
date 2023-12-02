@@ -152,4 +152,4 @@ cython_debug/
 
 .idea/
 .idea/**/workspace.xml
-Folder_setting.py
+Folder_setup.py
