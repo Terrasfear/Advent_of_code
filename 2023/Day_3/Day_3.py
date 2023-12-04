@@ -1,3 +1,20 @@
+def test_for_symbol(_line_idx, _char_idx):
+    global is_possible_gear
+    if _line_idx < 0 or _line_idx >= engine_size[0] or _char_idx < 0 or _char_idx >= engine_size[1]:
+        return False
+    else:
+        try:
+            char_to_test = lines[_line_idx][_char_idx]
+            if not (char_to_test.isdigit() or char_to_test == "."):
+                if char_to_test == "*":  # check for possible gears
+                    is_possible_gear = f"{_line_idx}_{_char_idx}"
+                return char_to_test
+            else:
+                return False
+        except IndexError:
+            return False
+
+
 file = open("input", 'r')
 lines = file.readlines()
 
@@ -20,24 +37,6 @@ gears = {}
 is_possible_gear = False
 
 id_sum = 0
-
-
-def test_for_symbol(_line_idx, _char_idx):
-    global is_possible_gear
-    if _line_idx < 0 or _line_idx >= engine_size[0] or _char_idx < 0 or _char_idx >= engine_size[1]:
-        return False
-    else:
-        try:
-            char_to_test = lines[_line_idx][_char_idx]
-            if not (char_to_test.isdigit() or char_to_test == "."):
-                if char_to_test == "*":  # check for possible gears
-                    is_possible_gear = f"{_line_idx}_{_char_idx}"
-                return char_to_test
-            else:
-                return False
-        except IndexError:
-            return False
-
 
 for line_idx, line in enumerate(lines):
     for char_idx, char in enumerate(line):
