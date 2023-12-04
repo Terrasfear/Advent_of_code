@@ -1,11 +1,9 @@
-import numpy as np
-
 file = open("input", 'r')
 lines = file.readlines()
 
 score_sum = 0
 
-card_count = np.ones(len(lines),dtype=np.int32)
+card_count = [1]*len(lines)
 
 for idx, line in enumerate(lines):
     line = line.removesuffix('\n')
