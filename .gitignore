@@ -152,4 +152,7 @@ cython_debug/
 
 .idea/
 .idea/**/workspace.xml
+
 Folder_setup.py
+**/input
+**/input_test
