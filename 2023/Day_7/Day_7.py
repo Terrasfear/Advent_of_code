@@ -140,7 +140,6 @@ def hand_hash_joker(hand: str):
 
 
 _file = open("input", 'r')
-# _file = open("test_input_all_options_joker", 'r')
 _lines = _file.readlines()
 
 _game = [{"hand": "zzzzz",
