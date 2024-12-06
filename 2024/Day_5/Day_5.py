@@ -16,10 +16,17 @@ def testUpdate(update: list[int], rules: Rules):
         if not rules(update[i], update[i+1]):
             return False
     return True
+    
+def bubbleSort(l :list, rule):
+    round = 1
+    while round < len(l)+1:
+        for idx in range(len(l)-round):
+            if not rule(l[idx], l[idx+1]):
+                l[idx], l[idx+1] = l[idx+1], l[idx]
+        round += 1
 
 def reorderUpdate(update: list[int], rules: Rules):
-    # todo
-    update.sort()
+    bubbleSort(update, rules)
 
 
 with open("Input", "r") as _file:
@@ -46,3 +53,4 @@ for update in _updates:
         _reordered_middles_sum += update[len(update) // 2]
 
 print(f"Part 1: {_middles_sum}")
+print(f"Part 2: {_reordered_middles_sum}")
